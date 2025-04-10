@@ -1,0 +1,78 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Table</title>
+</head>  
+<body>  
+    <header>
+        <h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="active">Home</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="../html5_Menu/html.html">HTML5</a></li>
+            <li><a href="../chartJS_Menu/chartJS.html">ChartJS</a></li>
+            <li><a href="../ajax_Menu/ajax.html">AJAX</a></li>
+            <li><a href="../oojs_Menu/oojs.html">OOJS</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+
+    <div class="employee-form">  
+        <form onsubmit="event.preventDefault();onFormSubmit();">  
+            <div>  
+                <label>Full Name*</label>
+                <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>  
+                <input type="text" name="fullName" id="fullName">  
+            </div>
+
+            <div>  
+                <label>Email Id</label>  
+                <input type="text" name="email" id="email">  
+            </div>  
+
+            <div>  
+                <label>Salary</label>  
+                <input type="text" name="salary" id="salary">  
+            </div>  
+
+            <div>  
+                <label>City</label>  
+                <input type="text" name="city" id="city">  
+            </div>  
+
+            <div  class="form-action-buttons">  
+                <input type="submit" value="Submit">  
+            </div>  
+        </form>  
+    </div>  
+
+    <br/>  
+
+    <div class = "employees-table">  
+            <table class="list" id="employeeList">  
+                <thead>  
+                    <tr>  
+                        <th>Full Name</th>  
+                        <th>Email Id</th>  
+                        <th>Salary</th>  
+                        <th>City</th>  
+                        <th>Actions</th>  
+                    </tr>  
+                </thead>  
+
+                <tbody>
+
+                </tbody>  
+            </table>  
+    </div>  
+
+    <script src="tablas.js"></script>  
+</body>  
+</html>  
