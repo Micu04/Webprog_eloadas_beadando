@@ -47,7 +47,7 @@
                 <input type="text" name="city" id="city" maxlength="25">  
             </div>  
 
-            <div  class="form-action-buttons">  
+            <div class="form-action-buttons">  
                 <input type="submit" value="Submit">  
             </div>  
         </form>  
@@ -57,40 +57,51 @@
 
     <div class = "employees-table">  
             <table class="list" id="employeeList">  
-                <thead>  
+                <thead>
+                    <input type="text" class="searchBox" id="searchBoxId" onkeyup="searchData()" placeholder="Írja be amire szűrni szeretne...">
                     <tr>  
-                        <th onclick="sortTable(0)">Teljse Név</th>  
-                        <th onclick="sortTable(1)">Email</th>  
-                        <th onclick="sortTable(2)">IRSZ</th>  
-                        <th onclick="sortTable(3)">Város</th>  
+                        <th class="sortable" onclick="sortTable(0)">Teljse Név</th>  
+                        <th class="sortable" onclick="sortTable(1)">Email</th>  
+                        <th class="sortable" onclick="sortTable(2)">IRSZ</th>  
+                        <th class="sortable" onclick="sortTable(3)">Város</th>
+                        <th class="edit-delete">Actions</th>
                     </tr>  
                 </thead>  
                     <tr>
-                        <td>aaa</td>
-                        <td>aaa</td>
-                        <td>aaa</td>
-                        <td>aaa</td>
+                        <td>Kiss László</td>
+                        <td>kisslaszlo123@gmail.com</td>
+                        <td>1111</td>
+                        <td>Kukutyin</td>
+                        <td><a onClick="onEdit(this)">Edit</a>
+                            <a onClick="onDelete(this)">Delete</a></td>
                     </tr>
 
                     <tr>
-                        <td>bbb</td>
-                        <td>bbb</td>
-                        <td>bbb</td>
-                        <td>bbb</td>
+                        <td>Nagy János</td>
+                        <td>nagyjanos999@citromail.hu</td>
+                        <td>2222</td>
+                        <td>Gatya</td>
+                        <td><a onClick="onEdit(this)">Edit</a>
+                            <a onClick="onDelete(this)">Delete</a></td>
                     </tr>
 
                     <tr>
-                        <td>ccc</td>
-                        <td>ccc</td>
-                        <td>ccc</td>
-                        <td>ccc</td>
+                        <td>Közepes Mihály</td>
+                        <td>kozepesmihaly31@freemail.hu</td>
+                        <td>3333</td>
+                        <td>Asztalosfehérvár</td>
+                        <td><a onClick="onEdit(this)">Edit</a>
+                            <a onClick="onDelete(this)">Delete</a></td>
                     </tr>
 
                     <tr>
-                        <td>ddd</td>
-                        <td>ddd</td>
-                        <td>ddd</td>
-                        <td>ddd</td>
+                        <td>Óriás Tivadar</td>
+                        <td>oriastivadar404@hotmail.hu</td>
+                        <td>6088</td>
+                        <td>Apost<span class="Apostag">a</span>g</td>
+
+                        <td><a onClick="onEdit(this)">Edit</a>
+                            <a onClick="onDelete(this)">Delete</a></td>
                     </tr>
                 <tbody>
 

@@ -1,0 +1,30 @@
+1. Alapok ✅
+Készítsen több állományból álló egységesen megjelenő honlapot vízszintes menüvel. 
+Kiinduló állomány: index.html
+Az oldal struktúrája minden oldalon ugyanaz legyen: 
+header, footer, aside, nav, div-content, A div-content (tartalmi) rész az, ami oldalanként egyedi.
+A menüsoron jelölje, hogy melyik az aktív (kiválasztott) menü.
+Fejlécbe írassa ki H1-es címsorral: Web-programozás-1 Előadás Házi feladat
+Láblécbe írja be az elkészítők nevét és Neptun kódját.
+
+
+2.	Táblázat menü:
+- CRUD funkcionalitás (Create, Read, Update, Delete) megvalósítása táblázattal ✅
+- legalább 4x4-es táblázat ✅
+- legyen validáció minden mezőre pl. kötelező, min, max hossz ✅
+- A táblázatot lehessen rendezni bármelyik oszlop alapján ✅
+- A táblázatban lehessen szűrni/keresni bármelyik oszlop alapján
+
+3.	HTML5 menü
+Készítsen a következő témákhoz 1-1 kis példát:
+Web Storage, Web Workers, Server-Sent Events, Geolocation API, Drag and drop API, Canvas, SVG
+A példákat elkészítheti egy oldalra is, vagy használhat almenüket is.
+
+4.	ChartJS menü
+Tegyen az oldalra legalább 5x5-ös számokat tartalmazó táblázatot. A táblázat bármelyik sorát kiválasztva ábrázolja az adatokat vonaldiagramon a táblázat alatt. 
+Javasolt diagram: https://www.chartjs.org/
+
+5.	AJAX menü
+A dokumentum végénél az API specifikációnál talál leírást az API-ról, amit fel kell használni a feladathoz.
+Ellenőrizze cURL-el és Postman-al, hogy jól működnek-e a CRUD funkciók.
+Az ellenőrzés lépéseit mutassa be a dokumentációban is.

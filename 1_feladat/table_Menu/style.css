@@ -34,10 +34,10 @@ nav a {
     padding:0.2em 0.6em;  
     border-right:1px solid white;  
 }  
-a.active{  
+nav a.active{  
     border-bottom:5px solid blue;  
 }  
-a:hover { background-color:#ff3300}   
+nav a:hover { background-color:#ff3300}   
 li {   
     display:inline;   
 }   
@@ -106,7 +106,15 @@ table.list{
 
 }  
 
-th {
+.searchBox {
+    width: 50%;
+}
+
+.edit-delete {
+    width: 10%;
+}
+
+.sortable {
     cursor: pointer;
 }  
 
@@ -195,3 +203,10 @@ label.validation-error{
     display:none;  
 
 }  
+
+.Apostag {
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+}
