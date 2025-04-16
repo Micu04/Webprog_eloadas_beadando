@@ -1,0 +1,113 @@
+/* --- Animációk --- */
+@keyframes pop-in {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes correct-sparkle {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(2deg);
+    }
+  }
+  
+  @keyframes wrong-shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+  }
+
+
+
+  
+  h1{
+    font-size: 2dvw;
+  }
+  /* --- Alapstílusok --- */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .quiz-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* --- Emoji megjelenítés --- */
+  .emoji-display {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    animation: pop-in 0.5s ease-out;
+    transition: transform 0.3s;
+  }
+  
+  /* --- Helyes / helytelen válasz animációk --- */
+  .emoji-correct {
+    animation: correct-sparkle 0.6s ease-in-out;
+  }
+  
+  .emoji-wrong {
+    animation: wrong-shake 0.4s ease-in-out;
+  }
+  
+  /* --- Input mező --- */
+  input.answer-input {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+  }
+  
+  input.answer-input:focus {
+    border-color: #7a5af8;
+    outline: none;
+  }
+  
+  /* --- Gomb --- */
+  button.submit-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #7a5af8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  button.submit-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    background-color: #6846e0;
+  }
+  
+  /* --- Eredmény üzenet --- */
+  .result-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4caf50;
+  }
+  
