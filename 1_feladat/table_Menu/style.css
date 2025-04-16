@@ -106,6 +106,10 @@ table.list{
 
 }  
 
+th {
+    cursor: pointer;
+}  
+
 td, th {  
 
     border: 1px solid #dddddd;  

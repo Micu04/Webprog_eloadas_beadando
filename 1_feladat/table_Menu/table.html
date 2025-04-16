@@ -27,24 +27,24 @@
     <div class="employee-form">  
         <form onsubmit="event.preventDefault();onFormSubmit();">  
             <div>  
-                <label>Full Name*</label>
+                <label>Teljes Név*</label>
                 <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>  
-                <input type="text" name="fullName" id="fullName">  
+                <input type="text" name="fullName" id="fullName" maxlength="30">  
             </div>
 
             <div>  
-                <label>Email Id</label>  
-                <input type="text" name="email" id="email">  
+                <label>Email</label>  
+                <input type="text" name="email" id="email" maxlength="40">  
             </div>  
 
             <div>  
-                <label>Salary</label>  
-                <input type="text" name="salary" id="salary">  
+                <label>IRSZ</label>  
+                <input type="number" name="irsz" id="irsz" min="1000" max="9999">  
             </div>  
 
             <div>  
-                <label>City</label>  
-                <input type="text" name="city" id="city">  
+                <label>Város</label>  
+                <input type="text" name="city" id="city" maxlength="25">  
             </div>  
 
             <div  class="form-action-buttons">  
@@ -59,14 +59,39 @@
             <table class="list" id="employeeList">  
                 <thead>  
                     <tr>  
-                        <th>Full Name</th>  
-                        <th>Email Id</th>  
-                        <th>Salary</th>  
-                        <th>City</th>  
-                        <th>Actions</th>  
+                        <th onclick="sortTable(0)">Teljse Név</th>  
+                        <th onclick="sortTable(1)">Email</th>  
+                        <th onclick="sortTable(2)">IRSZ</th>  
+                        <th onclick="sortTable(3)">Város</th>  
                     </tr>  
                 </thead>  
+                    <tr>
+                        <td>aaa</td>
+                        <td>aaa</td>
+                        <td>aaa</td>
+                        <td>aaa</td>
+                    </tr>
 
+                    <tr>
+                        <td>bbb</td>
+                        <td>bbb</td>
+                        <td>bbb</td>
+                        <td>bbb</td>
+                    </tr>
+
+                    <tr>
+                        <td>ccc</td>
+                        <td>ccc</td>
+                        <td>ccc</td>
+                        <td>ccc</td>
+                    </tr>
+
+                    <tr>
+                        <td>ddd</td>
+                        <td>ddd</td>
+                        <td>ddd</td>
+                        <td>ddd</td>
+                    </tr>
                 <tbody>
 
                 </tbody>  
