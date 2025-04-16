@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Gloria+Hallelujah&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light+Two&display=swap');
+h1{
+    text-align: center;
+    font-family: "Doto", sans-serif;
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #9333ea,
+    0 0 30px #9333ea,
+    0 0 40px #9333ea,
+    0 0 50px #9333ea;
+    font-size: 100px;
+}
+.menu{
+    text-align: center;
+    margin: auto;
+    background: red;
+    
+}
+.menupont{
+    padding: 100px;
+}
