@@ -13,7 +13,7 @@ Láblécbe írja be az elkészítők nevét és Neptun kódját.
 - legalább 4x4-es táblázat ✅
 - legyen validáció minden mezőre pl. kötelező, min, max hossz ✅
 - A táblázatot lehessen rendezni bármelyik oszlop alapján ✅
-- A táblázatban lehessen szűrni/keresni bármelyik oszlop alapján
+- A táblázatban lehessen szűrni/keresni bármelyik oszlop alapján ✅
 
 3.	HTML5 menü
 Készítsen a következő témákhoz 1-1 kis példát:

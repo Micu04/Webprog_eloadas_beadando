@@ -150,19 +150,21 @@ function searchData() {
     filter = input.value.toUpperCase();
     table = document.getElementById("employeeList");
     tr = table.getElementsByTagName("tr");
-    
-    for (j = 0; j < 4; j++)
-    {
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[j];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
+
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td");
+      rowContainsFilter = false;
+
+      for (j = 0; j < td.length; j++) {
+          if (td[j]) {
+              txtValue = td[j].textContent || td[j].innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  rowContainsFilter = true;
+                  break;
+              }
           }
-        }
       }
+
+      tr[i].style.display = rowContainsFilter ? "" : "none";
     }
 }
