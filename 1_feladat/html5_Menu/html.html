@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>HTML5</title>
 </head>
 <body>
     <header>
@@ -60,15 +60,15 @@
 
         <h1 class="feladat-cimek">Web Worker</h1>
 
-        <p>Ennyi ideje van az oldalon: <output id="result">0</output> mp</p>
+        <p>Ennyi ideje van az oldalon: <output id="timer">0</output> mp</p>
 
         <script>
             let w;
 
-            const x = document.getElementById("result");
+            const x = document.getElementById("timer");
               if(typeof(Worker) !== "undefined") {
                 if(typeof(w) == "undefined") {
-                    w = new Worker("timer.js");
+                    w = new Worker("script.js");
                 }
                 w.onmessage = function(event) {
                     x.innerHTML = event.data;
@@ -78,8 +78,50 @@
               }
         </script>
 
+
         <h1 class="feladat-cimek">Server-Sent Events</h1>
+
+        <h1>Getting Server Updates</h1>
+
+        <div id="result"></div>  
+        <script>  
+            if(typeof(EventSource) !== "undefined") {
+                //var source = new EventSource("sse.php");
+                source.onmessage = function(event) {
+                    document.getElementById("result").innerHTML += event.data + "<br>";
+                };
+            } else
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+        </script>
+
+
         <h1 class="feladat-cimek">Geolocation API</h1>
+
+        <p>Nyomjon ide, hogy megtudja a koordinátáit, és mutassa a térképen.</p>
+        <button onclick="getLocation()">Nyomjon meg</button>
+    
+        <p id="geo"></p>
+
+        <script>
+            var geo = document.getElementById("geo");
+
+            function getLocation()  
+            {  
+                if (navigator.geolocation)  
+                    navigator.geolocation.getCurrentPosition(showPosition);  
+                else   
+                    geo.innerHTML = "Geolocation is not supported by this browser.";  
+            }  
+            function showPosition(position)  {  
+                geo.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " +  position.coords.longitude;              
+                var newContent = '<iframe src = "https://maps.google.com/maps?q=' + position.coords.latitude + ',' + position.coords.longitude + '&hl=es;z=14&amp;output=embed" width="600" height="450"></iframe>';  
+                var contentHolder = document.getElementById('map');  
+                contentHolder.innerHTML = newContent;  
+            }  
+        </script>
+
+        <p id="map"></p>
+
         <h1 class="feladat-cimek">Drag and drop API</h1>
         <h1 class="feladat-cimek">Canvas</h1>
         <h1 class="feladat-cimek">SVG</h1>

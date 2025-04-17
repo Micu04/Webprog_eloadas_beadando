@@ -19,8 +19,8 @@ Láblécbe írja be az elkészítők nevét és Neptun kódját.
 Készítsen a következő témákhoz 1-1 kis példát:
 - Web Storage ✅
 - Web Workers ✅
-- Server-Sent Events
-- Geolocation API
+- Server-Sent Events ❓
+- Geolocation API ✅
 - Drag and drop API
 - Canvas
 - SVG
