@@ -17,7 +17,14 @@ Láblécbe írja be az elkészítők nevét és Neptun kódját.
 
 3.	HTML5 menü
 Készítsen a következő témákhoz 1-1 kis példát:
-Web Storage, Web Workers, Server-Sent Events, Geolocation API, Drag and drop API, Canvas, SVG
+- Web Storage ✅
+- Web Workers ✅
+- Server-Sent Events
+- Geolocation API
+- Drag and drop API
+- Canvas
+- SVG
+
 A példákat elkészítheti egy oldalra is, vagy használhat almenüket is.
 
 4.	ChartJS menü
@@ -28,3 +35,6 @@ Javasolt diagram: https://www.chartjs.org/
 A dokumentum végénél az API specifikációnál talál leírást az API-ról, amit fel kell használni a feladathoz.
 Ellenőrizze cURL-el és Postman-al, hogy jól működnek-e a CRUD funkciók.
 Az ellenőrzés lépéseit mutassa be a dokumentációban is.
+
++ feladat
+Valami komolyabb stílus az oldalnak

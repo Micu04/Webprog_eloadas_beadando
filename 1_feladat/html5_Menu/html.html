@@ -37,6 +37,52 @@
                 <p>Introduction, Contact</p>
             </article>
         </section>
+
+        <h1 class="feladat-cimek">Web Storage</h1>
+
+        <div class="ihpone5">
+            <h2>Minden 10. látogatónk nyer egy iPhone 5 okostelefont</h2>
+            <script>
+                if( localStorage.hits )
+                    localStorage.hits = Number(localStorage.hits) +1;
+                else
+                    localStorage.hits = 1;
+    
+                if(localStorage.hits % 10)
+                    document.write("Ön a " + localStorage.hits + ". látogatónk, szóval nem nyert semmit 😔");
+                else
+                    document.write("GRATULÁLUNK ÖN A " + localStorage.hits + ". LÁTOGATÓNK ÉS NYERT EGY IHPONE 5 OKOSTELEFONT!");
+
+            </script>
+
+            <button onclick="nulla()">Nullázás</button>
+        </div>
+
+        <h1 class="feladat-cimek">Web Worker</h1>
+
+        <p>Ennyi ideje van az oldalon: <output id="result">0</output> mp</p>
+
+        <script>
+            let w;
+
+            const x = document.getElementById("result");
+              if(typeof(Worker) !== "undefined") {
+                if(typeof(w) == "undefined") {
+                    w = new Worker("timer.js");
+                }
+                w.onmessage = function(event) {
+                    x.innerHTML = event.data;
+                };
+              } else {
+                    x.innerHTML = "Sorry! No Web Worker support.";
+              }
+        </script>
+
+        <h1 class="feladat-cimek">Server-Sent Events</h1>
+        <h1 class="feladat-cimek">Geolocation API</h1>
+        <h1 class="feladat-cimek">Drag and drop API</h1>
+        <h1 class="feladat-cimek">Canvas</h1>
+        <h1 class="feladat-cimek">SVG</h1>
     </div>
 
     <footer>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></footer>
