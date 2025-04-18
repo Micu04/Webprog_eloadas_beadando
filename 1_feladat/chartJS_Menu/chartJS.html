@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <title>ChartJS</title>
 </head>
 <body>
@@ -23,23 +24,18 @@
     <main>
         <div class="left-section">
             <section class="content-card">
-                <h2>Table</h2>
+                <h2>NVIDIA</h2>
+                <canvas id="nvidia" style="width:100%;max-width:750px"></canvas>
             </section>
 
             <section class="content-card">
-                <h2>HTML5</h2>
+                <h2>AMD</h2>
+                <canvas id="amd" style="width:100%;max-width:750px"></canvas>
             </section>
 
-            <section class="content-card">
-                <h2>ChartJS</h2>
-            </section>
-
-            <section class="content-card">
-                <h2>AJAX</h2>
-            </section>
-
-            <section class="content-card">
-                <h2>OOJS</h2>
+            <section  class="content-card">
+                <h2>Intel</h2>
+                <canvas id="intel" style="width:100%;max-width:750px"></canvas>
             </section>
         </div>
 
@@ -61,6 +57,6 @@
         <p>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></p>
     </footer>
 
-    <script></script>
+    <script src="chart.js"></script>
 </body>
 </html>
