@@ -57,11 +57,33 @@ li {
 }
 
 .feladat-cimek {
-    background-color: #ff3300;
+    background-color: #ff3300d2;
     width: 50%;
     margin-left: 25%;
     text-align: center;
     color: white;
     border: solid;
     border-color: black;
+}
+
+.drag-a-drop-l {
+    float: left;
+    border-radius: 28px;
+    height: 532px;
+    width: 251px;
+}
+
+.drag-a-drop-r {
+    float: right;
+    border-style: solid;
+    border-radius: 28px;
+    height: 532px;
+    width: 251px;
+}
+
+.kulso-doboz {
+    margin: auto;
+    width: 600px;
+    height: 540px;
+    padding: 10px;
 }

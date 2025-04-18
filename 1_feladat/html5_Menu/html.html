@@ -49,9 +49,9 @@
                     localStorage.hits = 1;
     
                 if(localStorage.hits % 10)
-                    document.write("Ön a " + localStorage.hits + ". látogatónk, szóval nem nyert semmit 😔");
+                    document.write("Ön a(z) " + localStorage.hits + ". látogatónk, szóval nem nyert semmit 😔");
                 else
-                    document.write("GRATULÁLUNK ÖN A " + localStorage.hits + ". LÁTOGATÓNK ÉS NYERT EGY IHPONE 5 OKOSTELEFONT!");
+                    document.write("GRATULÁLUNK ÖN A(Z) " + localStorage.hits + ". LÁTOGATÓNK ÉS NYERT EGY IHPONE 5 OKOSTELEFONT!");
 
             </script>
 
@@ -123,10 +123,26 @@
         <p id="map"></p>
 
         <h1 class="feladat-cimek">Drag and drop API</h1>
+
+        <div class="kulso-doboz" onclick="asd()">
+            <div class="drag-a-drop-l" id="lDiv" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+                <img src="iphone.jpg" alt="iPhone5" id="iphone" draggable="true" ondragstart="dragstartHandler(event)" >
+            </div>
+
+            <div class="drag-a-drop-r" id="rDiv" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
+
+            </div>
+        </div>
+
         <h1 class="feladat-cimek">Canvas</h1>
+
+        <canvas id="canvas" width="500" height="500"></canvas>
+
         <h1 class="feladat-cimek">SVG</h1>
     </div>
 
+    <script src="scripts/drag-and-drop.js"></script>
+    <script src="scripts/canvas.js"></script>
     <footer>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></footer>
 </body>
 </html>

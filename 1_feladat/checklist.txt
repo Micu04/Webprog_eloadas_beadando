@@ -21,8 +21,8 @@ Készítsen a következő témákhoz 1-1 kis példát:
 - Web Workers ✅
 - Server-Sent Events ❓
 - Geolocation API ✅
-- Drag and drop API
-- Canvas
+- Drag and drop API ✅
+- Canvas ✅
 - SVG
 
 A példákat elkészítheti egy oldalra is, vagy használhat almenüket is.
