@@ -151,7 +151,7 @@ function searchData() {
     table = document.getElementById("employeeList");
     tr = table.getElementsByTagName("tr");
 
-    for (i = 0; i < tr.length; i++) {
+    for (i = 1; i < tr.length; i++) {
       td = tr[i].getElementsByTagName("td");
       rowContainsFilter = false;
 

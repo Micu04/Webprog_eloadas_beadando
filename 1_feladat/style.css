@@ -1,43 +1,96 @@
-header, footer {  
-    padding: 0.5em;   
-    color: white;  
-    background-color: gray;  
-}  
-h1.header {  
-    padding: 0;  
-    margin: 0;  
-}  
-aside {  
-    float: left;  
-    width: 160px;  
-    margin: 0;  
-    padding: 1em;  
-}  
-section {  
-    margin-left: 190px;  
-    border-left: 1px solid gray;  
-    padding: 1em;  
-}  
-ul {  
-    float:left;  
-    width:100%;   
-    padding:0;  
-    margin:0;  
-    list-style-type:none;  
-}          
-a {  
-    float:left;  
-    width:6em;   
-    text-decoration:none;  
-    color:white;  
-    background-color:rgb(53, 128, 0);  
-    padding:0.2em 0.6em;  
-    border-right:1px solid white;  
-}  
-a.active{  
-    border-bottom:5px solid blue;  
-}  
-a:hover { background-color:#ff3300}   
-li {   
-    display:inline;   
-}   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+nav a.active, nav a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+main {
+    display: flex;
+    padding: 30px 10%;
+    gap: 30px;
+}
+
+.left-section {
+    flex: 2;
+}
+
+.right-section {
+    width: 300px;
+}
+
+.content-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

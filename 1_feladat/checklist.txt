@@ -35,4 +35,4 @@ Ellenőrizze cURL-el és Postman-al, hogy jól működnek-e a CRUD funkciók.
 Az ellenőrzés lépéseit mutassa be a dokumentációban is.
 
 + feladat
-Valami komolyabb stílus az oldalnak
+Valami komolyabb stílus az oldalnak ✅
