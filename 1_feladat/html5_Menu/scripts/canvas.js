@@ -1,28 +1,32 @@
 const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d")
 
 const centerX = canvas.width / 2;
 const centerY = canvas.height / 2;
-const radius = 150;
-const squareSize = 20;
-const numSquares = 8;
-let time = 0;
+const bigRadius = 100;
+const dotRadius = 8;
+let angle = 0
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-  for (let i = 0; i < numSquares; i++) {
-    const angle = i * 2 * Math.PI / numSquares;
-    const x = centerX + Math.cos(angle) * radius - squareSize / 2;
-    const y = centerY + Math.sin(angle) * radius - squareSize / 2;
-    const hue = (i * 45 + time * 50) % 360;
-    ctx.fillStyle = `hsl(${hue}, 80%, 60%)`;
-    ctx.fillRect(x, y, squareSize, squareSize);
-  }
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, bigRadius, 0, Math.PI * 2);
+  ctx.strokeStyle = "#555";
+  ctx.lineWidth = 8;
+  ctx.stroke()
 
-  time += 0.01;
+  const x = centerX + Math.cos(angle) * bigRadius;
+  const y = centerY + Math.sin(angle) * bigRadius
+
+  ctx.beginPath();
+  ctx.arc(x, y, dotRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "red";
+  ctx.fill()
+
+  angle += 0.02187
+
   requestAnimationFrame(draw);
-
 }
 
 draw();

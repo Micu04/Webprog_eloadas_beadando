@@ -4,145 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>HTML5</title>
+    <title>HTML5 Features</title>
 </head>
 <body>
+
     <header>
-        <h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../table_Menu/table.html">Table</a></li>
-            <li><a href="html.html" class="active">HTML5</a></li>
-            <li><a href="../chartJS_Menu/chartJS.html">ChartJS</a></li>
-            <li><a href="../ajax_Menu/ajax.html">AJAX</a></li>
-            <li><a href="../oojs_Menu/oojs.html">OOJS</a></li>
-        </ul>
+        <a href="../index.html">Home</a>
+        <a href="../table_Menu/table.html">Table</a>
+        <a href="html.html" class="active">HTML5</a>
+        <a href="../chartJS_Menu/chartJS.html">ChartJS</a>
+        <a href="../ajax_Menu/ajax.html">AJAX</a>
+        <a href="../oojs_Menu/oojs.html">OOJS</a>
     </nav>
 
-    <aside>
-        <h1>HTML5</h1>
-    </aside>
+    <main>
+        <div class="left-section">
+            <section class="content-card">
+                <h2>Web Storage</h2>
+                <h3>Minden 10. látogatónk nyer egy iPhone 5 okostelefont!</h3>
+                <div class="ihpone5">
+                    <script>
+                        if (localStorage.hits)
+                            localStorage.hits = Number(localStorage.hits) + 1;
+                        else
+                            localStorage.hits = 1;
 
-    <div>
-        <section>
-            <h1>Home page</h1>
-            <article>
-                <p>This is the home page</p>
-            </article>
-            <article>
-                <h2>Other pages</h2>
-                <p>Introduction, Contact</p>
-            </article>
-        </section>
+                        if (localStorage.hits % 10 === 0)
+                            document.write("GRATULÁLUNK! ÖN A(Z) <b>" + localStorage.hits + "</b>. LÁTOGATÓNK ÉS NYERT EGY <b>iPhone 5</b> OKOSTELEFONT!");
+                        else
+                            document.write("Ön a(z) <b>" + localStorage.hits + "</b>. látogatónk, szóval nem nyert semmit. 😔");
+                    </script>
+                </div>
+            </section>
 
-        <h1 class="feladat-cimek">Web Storage</h1>
+            <section class="content-card">
+                <h2>Web Worker</h2>
+                <p>Ennyi ideje van az oldalon: <output id="timer">0</output> mp</p>
+                <script>
+                    let w;
+                    const x = document.getElementById("timer");
+                    if (typeof(Worker) !== "undefined") {
+                        if (typeof(w) == "undefined") {
+                            w = new Worker("scripts/timer.js");
+                        }
+                        w.onmessage = function(event) {
+                            x.innerHTML = event.data;
+                        };
+                    } else {
+                        x.innerHTML = "Sorry! No Web Worker support.";
+                    }
+                </script>
+            </section>
 
-        <div class="ihpone5">
-            <h2>Minden 10. látogatónk nyer egy iPhone 5 okostelefont</h2>
-            <script>
-                if( localStorage.hits )
-                    localStorage.hits = Number(localStorage.hits) +1;
-                else
-                    localStorage.hits = 1;
-    
-                if(localStorage.hits % 10)
-                    document.write("Ön a(z) " + localStorage.hits + ". látogatónk, szóval nem nyert semmit 😔");
-                else
-                    document.write("GRATULÁLUNK ÖN A(Z) " + localStorage.hits + ". LÁTOGATÓNK ÉS NYERT EGY IHPONE 5 OKOSTELEFONT!");
+            <section class="content-card">
+                <h2>Server-Sent Events</h2>
+                <div id="result"></div>
+                <script>
+                    if (typeof(EventSource) !== "undefined") {
+                        //var source = new EventSource("sse.php");
+                        source.onmessage = function(event) {
+                            document.getElementById("result").innerHTML += event.data + "<br>";
+                        };
+                    } else {
+                        document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+                    }
+                </script>
+            </section>
 
-            </script>
+            <section class="content-card">
+                <h2>Geolocation API</h2>
+                <button onclick="getLocation()">Get Coordinates</button>
+                <p id="geo"></p>
+                <script>
+                    var geo = document.getElementById("geo");
 
-            <button onclick="nulla()">Nullázás</button>
+                    function getLocation() {
+                        if (navigator.geolocation)
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        else
+                            geo.innerHTML = "Geolocation is not supported by this browser.";
+                    }
+
+                    function showPosition(position) {
+                        geo.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+                        var newContent = '<iframe src="https://maps.google.com/maps?q=' + position.coords.latitude + ',' + position.coords.longitude + '&hl=es;z=14&amp;output=embed" width="600" height="450"></iframe>';
+                        document.getElementById('map').innerHTML = newContent;
+                    }
+                </script>
+                <p id="map"></p>
+            </section>
+
+            <section class="content-card">
+                <h2>Drag and Drop API</h2>
+                <div class="drag-and-drop">
+                    <div class="drag-area" id="lDiv" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+                        <img src="iphone.jpg" alt="iPhone" id="iphone" draggable="true" ondragstart="dragstartHandler(event)">
+                    </div>
+                    <div class="drop-area" id="rDiv" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <h2>Canvas</h2>
+                <canvas id="canvas" width="250" height="250"></canvas>
+            </section>
+
+            <section class="content-card">
+                <h2>SVG</h2>
+                <svg width="250" height="250" viewBox="-25 -25 250 250">
+                    <circle cx="100" cy="100" r="100" stroke="#555" stroke-width="8" fill="none" />
+                    <g transform="rotate(0 100 100)">
+                        <circle cx="200" cy="100" r="8" fill="red">
+                            <animateTransform 
+                                attributeName="transform" 
+                                type="rotate" 
+                                from="0 100 100" 
+                                to="-360 100 100" 
+                                dur="2s" 
+                                repeatCount="indefinite" 
+                            />
+                        </circle>
+                    </g>
+                </svg>
+            </section>
         </div>
 
-        <h1 class="feladat-cimek">Web Worker</h1>
-
-        <p>Ennyi ideje van az oldalon: <output id="timer">0</output> mp</p>
-
-        <script>
-            let w;
-
-            const x = document.getElementById("timer");
-              if(typeof(Worker) !== "undefined") {
-                if(typeof(w) == "undefined") {
-                    w = new Worker("script.js");
-                }
-                w.onmessage = function(event) {
-                    x.innerHTML = event.data;
-                };
-              } else {
-                    x.innerHTML = "Sorry! No Web Worker support.";
-              }
-        </script>
-
-
-        <h1 class="feladat-cimek">Server-Sent Events</h1>
-
-        <h1>Getting Server Updates</h1>
-
-        <div id="result"></div>  
-        <script>  
-            if(typeof(EventSource) !== "undefined") {
-                //var source = new EventSource("sse.php");
-                source.onmessage = function(event) {
-                    document.getElementById("result").innerHTML += event.data + "<br>";
-                };
-            } else
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
-        </script>
-
-
-        <h1 class="feladat-cimek">Geolocation API</h1>
-
-        <p>Nyomjon ide, hogy megtudja a koordinátáit, és mutassa a térképen.</p>
-        <button onclick="getLocation()">Nyomjon meg</button>
-    
-        <p id="geo"></p>
-
-        <script>
-            var geo = document.getElementById("geo");
-
-            function getLocation()  
-            {  
-                if (navigator.geolocation)  
-                    navigator.geolocation.getCurrentPosition(showPosition);  
-                else   
-                    geo.innerHTML = "Geolocation is not supported by this browser.";  
-            }  
-            function showPosition(position)  {  
-                geo.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " +  position.coords.longitude;              
-                var newContent = '<iframe src = "https://maps.google.com/maps?q=' + position.coords.latitude + ',' + position.coords.longitude + '&hl=es;z=14&amp;output=embed" width="600" height="450"></iframe>';  
-                var contentHolder = document.getElementById('map');  
-                contentHolder.innerHTML = newContent;  
-            }  
-        </script>
-
-        <p id="map"></p>
-
-        <h1 class="feladat-cimek">Drag and drop API</h1>
-
-        <div class="kulso-doboz" onclick="asd()">
-            <div class="drag-a-drop-l" id="lDiv" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                <img src="iphone.jpg" alt="iPhone5" id="iphone" draggable="true" ondragstart="dragstartHandler(event)" >
-            </div>
-
-            <div class="drag-a-drop-r" id="rDiv" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-
-            </div>
+        <div class="right-section">
+            <aside>
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank">Web Storage API Docs</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API" target="_blank">Web Workers API Docs</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API" target="_blank">Geolocation API Docs</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML5_Specification" target="_blank">HTML5 Specs</a></li>
+                </ul>
+            </aside>
         </div>
+    </main>
 
-        <h1 class="feladat-cimek">Canvas</h1>
-
-        <canvas id="canvas" width="500" height="500"></canvas>
-
-        <h1 class="feladat-cimek">SVG</h1>
-    </div>
+    <footer>
+        <p>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></p>
+    </footer>
 
     <script src="scripts/drag-and-drop.js"></script>
     <script src="scripts/canvas.js"></script>
-    <footer>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></footer>
+
 </body>
 </html>
