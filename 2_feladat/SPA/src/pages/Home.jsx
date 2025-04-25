@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
-function Home() {
+export default function Home() {
   return (
-    <div>
-      <h1>Arcade Lobby</h1>
-      <div className="menu">
-      <Link to="/Emojenius" className="menupont">Emojenius</Link>
-      <Link to="/Hangmaniac" className="menupont">Hangmaniac</Link>
+    <div className="home-container fade-in">
+      <h1 className="home-title">Válassz egy játékot!</h1>
+      <div className="home-menu">
+        <Link to="/Emojenius">
+          <img src="/Emojen.png" alt="Emojenius" className="menu-image" />
+        </Link>
+        <Link to="/Hangmaniac">
+          <img src="/Hangman.png" alt="Hangmaniac" className="menu-image" />
+        </Link>
       </div>
     </div>
-    
   );
 }
-
-export default Home;

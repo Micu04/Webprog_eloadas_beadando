@@ -6,10 +6,10 @@ export default function AnswerInput({ userAnswer, setUserAnswer, checkAnswer, cl
         className={className}
         value={userAnswer}
         onChange={(e) => setUserAnswer(e.target.value)}
-        placeholder="Guess the phrase..."
+        placeholder="Írd be a megfejtést..."
         onKeyDown={(e) => e.key === 'Enter' && checkAnswer()}
       />
-      <button className="submit-btn" onClick={checkAnswer}>Submit</button>
+      <button className="submit-btn" onClick={checkAnswer}>Beküldés</button>
     </div>
   );
 }
