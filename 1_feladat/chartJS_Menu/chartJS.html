@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>ChartJS</title>
 </head>
 <body>
     <header>
@@ -12,24 +13,50 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../table_Menu/table.html">Table</a></li>
-            <li><a href="../html5_Menu/html.html">HTML5</a></li>
-            <li><a href="chartJS.html" class="active">ChartJS</a></li>
-            <li><a href="../ajax_Menu/ajax.html">AJAX</a></li>
-            <li><a href="../oojs_Menu/oojs.html">OOJS</a></li>
-        </ul>
+        <a href="../index.html">Home</a>
+        <a href="../table_Menu/table.html">Table</a>
+        <a href="../html5_Menu/html.html">HTML5</a>
+        <a href="chartJS.html" class="active">ChartJS</a>
+        <a href="../ajax_Menu/ajax.html">AJAX</a>
+        <a href="../oojs_Menu/oojs.html">OOJS</a>
     </nav>
 
-    <aside>
-        <h1>ChartJS</h1>
-    </aside>
+    <main>
+        <div class="left-section">
+            <section class="content-card">
+                <h2>NVIDIA</h2>
+                <canvas id="nvidia" style="width:100%;max-width:750px"></canvas>
+            </section>
 
-    <div>
+            <section class="content-card">
+                <h2>AMD</h2>
+                <canvas id="amd" style="width:100%;max-width:750px"></canvas>
+            </section>
 
-    </div>
+            <section  class="content-card">
+                <h2>Intel</h2>
+                <canvas id="intel" style="width:100%;max-width:750px"></canvas>
+            </section>
+        </div>
 
-    <footer>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></footer>
+        <div class="right-section">
+            <aside>
+                <h2>Jobb oldal</h2>
+                <ul>
+                    <li>asd</li>
+                    <li>dsa</li>
+                    <li>sda</li>
+                    <li>sad</li>
+                    <li>dasda</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></p>
+    </footer>
+
+    <script src="chart.js"></script>
 </body>
 </html>

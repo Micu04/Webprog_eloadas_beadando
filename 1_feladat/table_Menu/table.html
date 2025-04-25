@@ -12,102 +12,110 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="table.html" class="active">Table</a></li>
-            <li><a href="../html5_Menu/html.html">HTML5</a></li>
-            <li><a href="../chartJS_Menu/chartJS.html">ChartJS</a></li>
-            <li><a href="../ajax_Menu/ajax.html">AJAX</a></li>
-            <li><a href="../oojs_Menu/oojs.html">OOJS</a></li>
-        </ul>
+        <a href="../index.html">Home</a>
+        <a href="table.html" class="active">Table</a>
+        <a href="../html5_Menu/html.html">HTML5</a>
+        <a href="../chartJS_Menu/chartJS.html">ChartJS</a>
+        <a href="../ajax_Menu/ajax.html">AJAX</a>
+        <a href="../oojs_Menu/oojs.html">OOJS</a>
     </nav>
+
+    <main>
+        <div class="content-card">  
+            <h2>Űrlap</h2>
+            <form class="custom-form" onsubmit="event.preventDefault();onFormSubmit();">  
+                <label class="validation-error hide" id="fullNameValidationError">A *-gal jelölt elemek kötelezőek</label>  
+              
+                <input type="text" name="fullName" id="fullName" maxlength="30" placeholder="Név*">  
+                <input type="email" name="email" id="email" maxlength="40" placeholder="Email">
+                <input type="number" name="irsz" id="irsz" min="1000" max="9999" placeholder="Irányítószám">
+                <input type="text" name="city" id="city" maxlength="25" placeholder="Település">
     
-    <hr>
-
-    <div class="employee-form">  
-        <form onsubmit="event.preventDefault();onFormSubmit();">  
-            <div>  
-                <label>Teljes Név*</label>
-                <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>  
-                <input type="text" name="fullName" id="fullName" maxlength="30">  
-            </div>
-
-            <div>  
-                <label>Email</label>  
-                <input type="text" name="email" id="email" maxlength="40">  
+                <button type="submit">Küldés</button>
+            </form>
+        </div>
+    
+        <div class="left-section">
+            <div class="content-card"> 
+                <h2>Adattábla</h2>
+                <table class="custom-table" id="employeeList">  
+                    <thead>
+                        <input type="text" class="searchBox" id="searchBoxId" onkeyup="searchData()" placeholder="Írja be amire szűrni szeretne...">
+                        <tr>  
+                            <th class="sortable" onclick="sortTable(0)">Teljse Név</th>
+                            <th class="sortable" onclick="sortTable(1)">Email</th>
+                            <th class="sortable" onclick="sortTable(2)">Irányítószám</th>
+                            <th class="sortable" onclick="sortTable(3)">Város</th>
+                            <th class="edit-delete">Actions</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>Kiss László</td>
+                            <td>kisslaszlo123@gmail.com</td>
+                            <td>1111</td>
+                            <td>Kukutyin</td>
+                            <td>
+                                <a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td>Nagy János</td>
+                            <td>nagyjanos999@citromail.hu</td>
+                            <td>2222</td>
+                            <td>Gatya</td>
+                            <td>
+                                <a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td>Közepes Mihály</td>
+                            <td>kozepesmihaly31@freemail.hu</td>
+                            <td>3333</td>
+                            <td>Asztalosfehérvár</td>
+                            <td>
+                                <a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td>Óriás Tivadar</td>
+                            <td>oriastivadar404@hotmail.hu</td>
+                            <td>6088</td>
+                            <td>Apost<span class="Apostag">a</span>g</td>
+                            <td>
+                                <a onClick="onEdit(this)">Edit</a>
+                                <a onClick="onDelete(this)">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>  
+                </table>  
             </div>  
+        </div>
 
-            <div>  
-                <label>IRSZ</label>  
-                <input type="number" name="irsz" id="irsz" min="1000" max="9999">  
-            </div>  
+        <div class="right-section">
+            <aside>
+                <h2>Jobb oldal</h2>
+                <ul>
+                    <li>asd</li>
+                    <li>dsa</li>
+                    <li>sda</li>
+                    <li>sad</li>
+                    <li>dasda</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
 
-            <div>  
-                <label>Város</label>  
-                <input type="text" name="city" id="city" maxlength="25">  
-            </div>  
-
-            <div class="form-action-buttons">  
-                <input type="submit" value="Submit">  
-            </div>  
-        </form>  
-    </div>  
-
-    <br/>  
-
-    <div class = "employees-table">  
-            <table class="list" id="employeeList">  
-                <thead>
-                    <input type="text" class="searchBox" id="searchBoxId" onkeyup="searchData()" placeholder="Írja be amire szűrni szeretne...">
-                    <tr>  
-                        <th class="sortable" onclick="sortTable(0)">Teljse Név</th>  
-                        <th class="sortable" onclick="sortTable(1)">Email</th>  
-                        <th class="sortable" onclick="sortTable(2)">IRSZ</th>  
-                        <th class="sortable" onclick="sortTable(3)">Város</th>
-                        <th class="edit-delete">Actions</th>
-                    </tr>  
-                </thead>  
-                    <tr>
-                        <td>Kiss László</td>
-                        <td>kisslaszlo123@gmail.com</td>
-                        <td>1111</td>
-                        <td>Kukutyin</td>
-                        <td><a onClick="onEdit(this)">Edit</a>
-                            <a onClick="onDelete(this)">Delete</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>Nagy János</td>
-                        <td>nagyjanos999@citromail.hu</td>
-                        <td>2222</td>
-                        <td>Gatya</td>
-                        <td><a onClick="onEdit(this)">Edit</a>
-                            <a onClick="onDelete(this)">Delete</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>Közepes Mihály</td>
-                        <td>kozepesmihaly31@freemail.hu</td>
-                        <td>3333</td>
-                        <td>Asztalosfehérvár</td>
-                        <td><a onClick="onEdit(this)">Edit</a>
-                            <a onClick="onDelete(this)">Delete</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>Óriás Tivadar</td>
-                        <td>oriastivadar404@hotmail.hu</td>
-                        <td>6088</td>
-                        <td>Apost<span class="Apostag">a</span>g</td>
-
-                        <td><a onClick="onEdit(this)">Edit</a>
-                            <a onClick="onDelete(this)">Delete</a></td>
-                    </tr>
-                <tbody>
-
-                </tbody>  
-            </table>  
-    </div>  
+    <footer>
+        <p>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></p>
+    </footer>
 
     <script src="tablas.js"></script>  
 </body>  
