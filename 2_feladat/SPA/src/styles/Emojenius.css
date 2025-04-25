@@ -31,16 +31,49 @@
   h1{
     font-size: 2dvw;
   }
-  /* --- Alapstílusok --- */
   body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    background: linear-gradient(135deg, #f3f0ff, #dceafe, #e0f7fa, #fff8dc);
+    background-size: 500% 500%;
+    animation: crazyGradient 18s ease-in-out infinite;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
   }
+  
+  /* Finom pulzáló fény */
+  body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulseLight 5s ease-in-out infinite;
+    z-index: -1;
+  }
+  
+  @keyframes crazyGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes pulseLight {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.6;
+    }
+  }
+  
   
   .quiz-container {
     background-color: #ffffff;
