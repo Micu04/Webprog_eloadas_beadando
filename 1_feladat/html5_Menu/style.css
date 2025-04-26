@@ -136,3 +136,9 @@ aside ul li {
 aside h2 {
     margin-bottom: 10px;
 }
+
+.home {
+    width: 60px;
+    height: 60px;
+    float: left;
+}

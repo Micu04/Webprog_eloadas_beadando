@@ -8,6 +8,9 @@
 </head>
 <body>
     <header>
+        <a href="../../kezdolap/homepage.html">
+            <img src="../../home.png" alt="Home" class="home">
+        </a>
         <h1 class="header">Web-programozás-1 Előadás Házi feladat</h1>
     </header>
 
@@ -23,20 +26,18 @@
     <main>
         <div class="left-section">
             <section class="content-card">
-                <h2>AJAX Adatkezelés</h2>
-            
+                <h2>Adatok lekérése</h2>
                 <div>
                     <h3>Adatok lekérése</h3>
                     <button onclick="getAllData()">Összes adat lekérése</button>
                     <div id="dataList"></div>
                     <div id="stats"></div>
                 </div>
-            
-                <br>
-                <hr>
-            
+            </section>
+    
+            <section class="content-card">
+                <h2>Új adat felvitele (Create)</h2>
                 <div>
-                    <h3>Új adat felvitele (Create)</h3>
                     <input type="text" id="newCode" placeholder="Code">
                     <input type="text" id="newName" placeholder="Name">
                     <input type="number" id="newHeight" placeholder="Height">
@@ -44,11 +45,11 @@
                     <button onclick="createData()">Mentés</button>
                     <p id="createMsg"></p>
                 </div>
-                
-                <hr>
-            
+            </section>
+    
+            <section class="content-card">
+                <h2>Adat módosítása (Update)</h2>
                 <div>
-                    <h3>Adat módosítása (Update)</h3>
                     <input type="text" id="updateId" placeholder="ID">
                     <button onclick="getDataForId()">Adatok betöltése</button>
                     <br>
@@ -59,16 +60,17 @@
                     <button onclick="updateData()">Módosítás</button>
                     <p id="updateMsg"></p>
                 </div>
-            
-                <hr>
-            
+            </section>
+    
+            <section class="content-card">
+                <h2>Adat törlése (Delete)</h2>
                 <div>
-                    <h3>Adat törlése (Delete)</h3>
                     <input type="text" id="deleteId" placeholder="ID">
                     <button onclick="deleteData()">Törlés</button>
                     <p id="deleteMsg"></p>
                 </div>
             </section>
+            <br>
         </div>
 
         <div class="right-section">
