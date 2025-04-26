@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- Háttér beállítások --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f3f0ff, #dceafe, #e0f7fa, #fff8dc);
+  background-size: 600% 600%;
+  animation: háttérMozgás 20s ease infinite;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes háttérMozgás {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Oldal wrapper --- */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- Játék konténer --- */
+.hangmaniac-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  padding: 50px;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* --- Logó --- */
+.game-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* --- Tipp szöveg --- */
+.hangmaniac-container p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* --- ASCII figura --- */
+.ascii {
+  font-size: 1.8rem;
+  white-space: pre;
+  color: #7a5af8;
+  text-shadow: 0 0 8px #7a5af8;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* --- Szó megjelenítése --- */
+.word {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin-bottom: 30px;
+}
+
+.letter {
+  display: inline-block;
+  width: 30px;
+  border-bottom: 2px solid #7a5af8;
+  text-transform: uppercase;
+}
+
+/* --- Billentyűzet --- */
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.keyboard button {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.keyboard button:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+/* Helyes tipp */
+.keyboard button.correct {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+/* Hibás tipp */
+.keyboard button.wrong {
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+/* --- Játék vége üzenet --- */
+.gameover {
+  margin-top: 30px;
+}
+
+.gameover h2 {
+  font-size: 2rem;
+  color: #ff5e78;
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.gameover button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #7a5af8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.gameover button:hover {
+  background-color: #6846e0;
+  transform: scale(1.05);
+}
+
+/* --- Nehézség választó gombok --- */
+.difficulty-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.difficulty-selector button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #7a5af8;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.difficulty-selector button:hover {
+  background-color: #6846e0;
+  transform: scale(1.05);
+}
+
+/* --- Vissza gomb konténer --- */
+.back-home-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+/* --- Vissza gomb maga --- */
+.back-home-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #7a5af8;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #6846e0;
+  transform: scale(1.05);
+}

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* --- Háttér beállítások --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f3f0ff, #dceafe, #e0f7fa, #fff8dc);
+  background-size: 600% 600%;
+  animation: háttérMozgás 20s ease infinite;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes háttérMozgás {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* --- Quiz konténer --- */
+
+
+.quiz-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  padding: 50px;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* --- Emoji megjelenítő --- */
+.emoji-display {
+ padding-top: 0;
+ margin-top: 0;
+  font-size: 4rem;
+  margin-bottom: 30px;
+  animation: popIn 0.5s ease-out;
+  transition: transform 0.3s;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.emoji-correct {
+  animation: correctSparkle 0.6s ease-in-out;
+}
+
+@keyframes correctSparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+}
+
+.emoji-wrong {
+  animation: wrongShake 0.4s ease-in-out;
+}
+
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+/* --- Input mező --- */
+input.answer-input {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+input.answer-input:focus {
+  border-color: #7a5af8;
+  outline: none;
+}
+
+/* --- Gomb --- */
+button.submit-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #7a5af8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button.submit-btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  background-color: #6846e0;
+}
+
+/* --- Eredmény üzenet --- */
+.result-message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* --- Vissza gomb --- */
+.back-home-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.back-home-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #7a5af8;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #6846e0;
+  transform: scale(1.05);
+}
