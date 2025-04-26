@@ -44,7 +44,7 @@ Ezeket ellenőrizze a JS fájlban (validation). Az Update résznél legyen egy b
 és egy getDataForId gomb, amivel először kiolvastatjuk az adatokat beviteli mezőkbe, ahol módosíthatjuk azokat.
 A Create, Update, Delete műveletek sikerességéről adjunk visszajelzést a weboldalon.
 
-6.	OOJS menü
+6.	OOJS menü ✅
 Készítsen egy szabadon választott Objektumorientált JavaScript alkalmazást.
 Alkalmazza a következőket: class, constructor, metódusok, document.body.appendChild, extends, super
 
