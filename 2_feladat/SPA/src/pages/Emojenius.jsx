@@ -29,7 +29,7 @@ export default function Emojenius() {
     <>
       {/* Kvíz konténer */}
       <div className="quiz-container">
-      <img src="/Emojen.png" alt="HangManiac" className="game-logo" />
+      <img src="./Emojen.png" alt="HangManiac" className="game-logo" />
 
         {/* Emoji kérdés */}
         <div

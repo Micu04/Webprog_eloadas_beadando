@@ -51,7 +51,7 @@ export default function Hangmaniac() {
     <>
       <div className="hangmaniac-container">
         {/* --- Logó --- */}
-        <img src="/Hangman.png" alt="HangManiac" className="game-logo" />
+        <img src="./Hangman.png" alt="HangManiac" className="game-logo" />
 
         {/* --- Tartalom --- */}
         {!difficulty ? (
