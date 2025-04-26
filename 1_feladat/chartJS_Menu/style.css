@@ -77,7 +77,7 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 30px;
-	position: fixed;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -93,4 +93,73 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.custom-form input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.custom-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.custom-table th, .custom-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.custom-table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.Apostag {
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+}
+
+.sortable {
+    cursor: pointer;
+}  
+
+.searchBox {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.searchBox:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    outline: none;
 }

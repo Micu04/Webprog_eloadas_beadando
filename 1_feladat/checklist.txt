@@ -25,10 +25,10 @@ Készítsen a következő témákhoz 1-1 kis példát:
 - Canvas ✅
 - SVG ✅
 
-4.	ChartJS menü
+4.	ChartJS menü ✅
 Tegyen az oldalra legalább 5x5-ös számokat tartalmazó táblázatot. A táblázat bármelyik sorát kiválasztva ábrázolja az adatokat vonaldiagramon a táblázat alatt. 
 Javasolt diagram: https://www.chartjs.org/ 
-❓❓❓
+
 
 
 5.	AJAX menü ✅
