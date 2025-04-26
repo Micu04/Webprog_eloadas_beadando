@@ -94,3 +94,12 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+aside ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+aside h2 {
+    margin-bottom: 10px;
+}

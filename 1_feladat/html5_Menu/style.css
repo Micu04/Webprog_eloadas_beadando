@@ -127,3 +127,12 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+aside ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+aside h2 {
+    margin-bottom: 10px;
+}
