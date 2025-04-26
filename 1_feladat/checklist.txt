@@ -31,10 +31,24 @@ Javasolt diagram: https://www.chartjs.org/
 ❓❓❓
 
 
-5.	AJAX menü
+5.	AJAX menü ✅
 A dokumentum végénél az API specifikációnál talál leírást az API-ról, amit fel kell használni a feladathoz.
 Ellenőrizze cURL-el és Postman-al, hogy jól működnek-e a CRUD funkciók.
 Az ellenőrzés lépéseit mutassa be a dokumentációban is.
+Készítsen AJAX alkalmazást az API-t felhasználva és jelenítse meg az adatokat weboldalon.
+A következő fájlokat kell elkészíteni: ajax.html, ajax.js
+A Read funkciónál írassa ki az adott kódhoz tartozó adatokat egymás alá. Majd utána
+írassa ki a height értékekről: összeg, átlag, legnagyobb.
+A Create és Update funkcióknál a beviteli mező nem lehetnek üresek és max 30 karakter értéket tartalmazhatnak.
+Ezeket ellenőrizze a JS fájlban (validation). Az Update résznél legyen egy beviteli mező, amibe beírjuk az ID-t,
+és egy getDataForId gomb, amivel először kiolvastatjuk az adatokat beviteli mezőkbe, ahol módosíthatjuk azokat.
+A Create, Update, Delete műveletek sikerességéről adjunk visszajelzést a weboldalon.
+
+6.	OOJS menü
+Készítsen egy szabadon választott Objektumorientált JavaScript alkalmazást.
+Alkalmazza a következőket: class, constructor, metódusok, document.body.appendChild, extends, super
+
+
 
 + feladat
 Valami komolyabb stílus az oldalnak ✅

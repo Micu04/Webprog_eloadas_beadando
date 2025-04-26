@@ -23,23 +23,51 @@
     <main>
         <div class="left-section">
             <section class="content-card">
-                <h2>Table</h2>
-            </section>
-
-            <section class="content-card">
-                <h2>HTML5</h2>
-            </section>
-
-            <section class="content-card">
-                <h2>ChartJS</h2>
-            </section>
-
-            <section class="content-card">
-                <h2>AJAX</h2>
-            </section>
-
-            <section class="content-card">
-                <h2>OOJS</h2>
+                <h2>AJAX Adatkezelés</h2>
+            
+                <div>
+                    <h3>Adatok lekérése</h3>
+                    <button onclick="getAllData()">Összes adat lekérése</button>
+                    <div id="dataList"></div>
+                    <div id="stats"></div>
+                </div>
+            
+                <br>
+                <hr>
+            
+                <div>
+                    <h3>Új adat felvitele (Create)</h3>
+                    <input type="text" id="newCode" placeholder="Code">
+                    <input type="text" id="newName" placeholder="Name">
+                    <input type="number" id="newHeight" placeholder="Height">
+                    <input type="number" id="newWeight" placeholder="Weight">
+                    <button onclick="createData()">Mentés</button>
+                    <p id="createMsg"></p>
+                </div>
+            
+                <hr>
+            
+                <div>
+                    <h3>Adat módosítása (Update)</h3>
+                    <input type="text" id="updateId" placeholder="ID">
+                    <button onclick="getDataForId()">Adatok betöltése</button>
+                    <br>
+                    <input type="text" id="editCode" placeholder="Code">
+                    <input type="text" id="editName" placeholder="Name">
+                    <input type="number" id="editHeight" placeholder="Height">
+                    <input type="number" id="editWeight" placeholder="Weight">
+                    <button onclick="updateData()">Módosítás</button>
+                    <p id="updateMsg"></p>
+                </div>
+            
+                <hr>
+            
+                <div>
+                    <h3>Adat törlése (Delete)</h3>
+                    <input type="text" id="deleteId" placeholder="ID">
+                    <button onclick="deleteData()">Törlés</button>
+                    <p id="deleteMsg"></p>
+                </div>
             </section>
         </div>
 
@@ -61,6 +89,6 @@
         <p>Pinkász Tamás: <b>HYB4B6</b> | Janik Miklós Balázs: <b>AAKXBU</b></p>
     </footer>
 
-    <script></script>
+    <script src="ajax.js"></script>
 </body>
 </html>
