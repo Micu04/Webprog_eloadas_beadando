@@ -23,10 +23,10 @@ function dropHandler(ev) {
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
   
-  asd();
+  activeDiv();
 }
 
-function asd() {
+function activeDiv() {
   if (ldiv.contains(img)) {
     ldiv.style.border = '4px solid #007bff';
     rdiv.style.border = '2px solid #007bff';

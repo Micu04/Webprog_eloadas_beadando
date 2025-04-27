@@ -95,6 +95,21 @@ button:hover {
     background-color: #0056b3;
 }
 
+aside ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+aside h2 {
+    margin-bottom: 10px;
+}
+
+.home {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
 .drag-and-drop {
     display: flex;
     justify-content: space-between;
@@ -115,30 +130,11 @@ button:hover {
     overflow: hidden;
 }
 
-img {
-    max-width: 100%;
+.drag-and-drop img {
     cursor: grab;
-}
-
-.drag-area img, .drop-area img {
     max-width: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-aside ul li {
-    margin-bottom: 12px;
-    font-size: 16px;
-}
-
-aside h2 {
-    margin-bottom: 10px;
-}
-
-.home {
-    width: 60px;
-    height: 60px;
-    float: left;
 }
